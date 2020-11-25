@@ -6,7 +6,9 @@ public class Calculator {
 		 return 0;
 	 else if (numbers.contains(",")) {
 		 String[] arr=numbers.split(",");
-		 int sum=Integer.parseInt(arr[0])+Integer.parseInt(arr[1]); 
+		 int sum=0;
+		 for(int i=0;i<arr.length;i++) 
+		 sum+=Integer.parseInt(arr[i]); 
 		 return sum;
 	 }
 	 else
