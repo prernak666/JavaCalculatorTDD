@@ -2,16 +2,15 @@ package javaCalculator;
 
 public class Calculator {
   public static int add(String numbers) {
-	 if(numbers=="")
-		 return 0;
-	 else if (numbers.contains(",")) {
-		 String[] arr=numbers.split(",");
-		 int sum=0;
-		 for(int i=0;i<arr.length;i++) 
-		 sum+=Integer.parseInt(arr[i]); 
-		 return sum;
-	 }
-	 else
-		 return Integer.parseInt(numbers);
-  }
+	int returnValue=0;
+	String[] arr=numbers.split(",");
+	if(arr.length>2)
+		throw new RuntimeException("More than two numbers not allowed");
+	else {
+	for(String arr1:arr)
+		if(!arr1.isEmpty()) {
+		returnValue+=Integer.parseInt(arr1);
+		}}
+	return returnValue;
+}
 }
